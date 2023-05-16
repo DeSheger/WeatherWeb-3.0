@@ -3,8 +3,6 @@ import Start from './views/Start';
 import Home from './views/Home';
 import Weekly from './views/Weekly';
 
-import './App.css';
-
 function App() {
   return (
     <>

@@ -1,0 +1,79 @@
+.start {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+.start__main {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: linear-gradient(-45deg, #290013, #02001a, #070707, #290000);
+  background-size: 400% 400%;
+  animation: mainBackground 20s ease infinite;
+  height: 100vh;
+}
+.start__mainMoon {
+  padding: 10%;
+  background-image: url(../../sources/moonStart.png);
+  background-origin: content-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-area: 1/2/4/5;
+  z-index: 0;
+  animation: moonRotate 20s ease infinite;
+}
+@keyframes moonRotate {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(160deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes mainBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.start__form {
+  grid-area: 4/2/4/5;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.start__form-text {
+  color: white;
+  padding: 10px 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+.start__form-input {
+  width: 300px;
+  height: 35px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=main.css.map */
