@@ -27,7 +27,7 @@
 }
 .start__mainMoon {
   padding: 10%;
-  background-image: url(../../sources/moonStart.png);
+  background-image: url(../../sources/Start/moonStart.png);
   background-origin: content-box;
   background-size: contain;
   background-position: center;
@@ -37,7 +37,7 @@
   animation: moonRotate 20s ease infinite;
 }
 .start__mainComete1 {
-  background-image: url(../../sources/cometeStart.png);
+  background-image: url(../../sources/Start/cometeStart.png);
   background-origin: content-box;
   background-size: 50px 50px;
   background-position: 100% 0;
@@ -46,7 +46,7 @@
   animation: cometeFly 10s linear infinite;
 }
 .start__mainComete2 {
-  background-image: url(../../sources/comete2Start.png);
+  background-image: url(../../sources/Start/comete2Start.png);
   background-origin: content-box;
   background-size: 30px 30px;
   background-position: 0 0;
@@ -55,7 +55,7 @@
   animation: cometeFly2 5s linear infinite;
 }
 .start__mainBackground {
-  background-image: url(../../sources/backgroundStart.png);
+  background-image: url(../../sources/Start/backgroundStart.png);
   background-origin: content-box;
   background-size: cover;
   opacity: 0.3;
@@ -64,7 +64,7 @@
   animation: backgroundOpacity linear infinite 5s;
 }
 .start__mainSpacewalk {
-  background-image: url(../../sources/spacewalksStart.png);
+  background-image: url(../../sources/Start/spacewalksStart.png);
   background-origin: content-box;
   background-size: contain;
   opacity: 0.3;
@@ -73,7 +73,7 @@
   animation: spaceWalkerAnimation linear infinite 5s;
 }
 .start__mainMap {
-  background-image: url(../../sources/mapStart.png);
+  background-image: url(../../sources/Start/mapStart.png);
   background-origin: content-box;
   background-size: contain;
   background-repeat: no-repeat;
@@ -99,7 +99,9 @@
 .start__form-input {
   width: 225px;
   height: 35px;
+  padding: 10px 10px;
   animation: inputAnimation linear 5s;
+  cursor: text;
 }
 
 @keyframes moonRotate {
@@ -173,8 +175,81 @@
     transform: rotate(0deg);
   }
 }
+.home {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.home__main {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(14, 12, 12);
+  grid-area: 1/1/7/7;
+}
+.home__form {
+  grid-area: 2/2/6/6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.home__form-text {
+  display: flex;
+  grid-area: 1/1/1/3;
+  justify-content: center;
+  align-items: center;
+  color: green;
+}
+.home__form-output {
+  width: 100%;
+  height: 100%;
+  grid-area: 2/1/4/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: white;
+}
+.home__form-outputImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form-outputWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form-outputTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form-outputWind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__form-input {
+  width: 100%;
+  height: 100%;
+  grid-area: 4/1/4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
 }/*# sourceMappingURL=main.css.map */
