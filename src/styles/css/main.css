@@ -11,11 +11,19 @@
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background: linear-gradient(-45deg, #290013, #02001a, #070707, #290000);
+  background: linear-gradient(-45deg, #000000, #262552, #241616, #060607);
   background-size: 400% 400%;
   animation: mainBackground 20s ease infinite;
   height: 100vh;
   overflow: hidden;
+}
+.start__mainQuote {
+  color: green;
+  padding: 10px 10px;
+  font-family: "Courier New", Courier, monospace;
+  position: top;
+  width: 100;
+  grid-area: 1/1/1/6;
 }
 .start__mainMoon {
   padding: 10%;
@@ -28,6 +36,72 @@
   z-index: 0;
   animation: moonRotate 20s ease infinite;
 }
+.start__mainComete1 {
+  background-image: url(../../sources/cometeStart.png);
+  background-origin: content-box;
+  background-size: 50px 50px;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  grid-area: 1/1/6/6;
+  animation: cometeFly 10s linear infinite;
+}
+.start__mainComete2 {
+  background-image: url(../../sources/comete2Start.png);
+  background-origin: content-box;
+  background-size: 30px 30px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  grid-area: 1/1/6/6;
+  animation: cometeFly2 5s linear infinite;
+}
+.start__mainBackground {
+  background-image: url(../../sources/backgroundStart.png);
+  background-origin: content-box;
+  background-size: cover;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  grid-area: 1/1/6/6;
+  animation: backgroundOpacity linear infinite 5s;
+}
+.start__mainSpacewalk {
+  background-image: url(../../sources/spacewalksStart.png);
+  background-origin: content-box;
+  background-size: contain;
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  grid-area: 3/2/3/2;
+  animation: spaceWalkerAnimation linear infinite 5s;
+}
+.start__mainMap {
+  background-image: url(../../sources/mapStart.png);
+  background-origin: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  grid-area: 2/5/2/5;
+}
+.start__form {
+  grid-area: 4/2/4/5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.start__form-text {
+  color: green;
+  padding: 10px 10px;
+  font-family: "Courier New", Courier, monospace;
+  position: top;
+  width: 100;
+}
+.start__form-input {
+  width: 225px;
+  height: 35px;
+  animation: inputAnimation linear 5s;
+}
+
 @keyframes moonRotate {
   0% {
     transform: rotate(0);
@@ -53,27 +127,6 @@
     background-position: 0% 50%;
   }
 }
-.start__form {
-  grid-area: 4/2/4/5;
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-.start__form-text {
-  color: green;
-  padding: 10px 10px;
-  font-family: "Courier New", Courier, monospace;
-  width: 100;
-}
-.start__form-input {
-  width: 100%;
-  height: 35px;
-  animation: inputAnimation linear 5s;
-}
 @keyframes inputAnimation {
   from {
     opacity: 0;
@@ -82,7 +135,44 @@
     opacity: 1;
   }
 }
-
+@keyframes cometeFly {
+  from {
+    background-position: 120% 0;
+  }
+  to {
+    background-position: 0 120%;
+  }
+}
+@keyframes cometeFly2 {
+  from {
+    background-position: -20% 0;
+  }
+  to {
+    background-position: 120% 120%;
+  }
+}
+@keyframes backgroundOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spaceWalkerAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
