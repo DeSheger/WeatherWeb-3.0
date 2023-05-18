@@ -221,21 +221,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: 1/1/1/1;
+  overflow: hidden;
 }
 .home__form-outputWeather {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: 1/2/1/2;
+  overflow: hidden;
 }
 .home__form-outputTemp {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: 2/1/2/1;
+  overflow: hidden;
 }
 .home__form-outputWind {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: 2/2/2/2;
+  overflow: hidden;
 }
 .home__form-input {
   width: 100%;

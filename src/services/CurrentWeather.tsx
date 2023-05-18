@@ -24,11 +24,7 @@ const CurrentWeather = (props:any) => {
         })
     })
 
-    return (
-        <>
-        {weather},{temp},{wind}
-        </>
-    )
+    return null
 }
 
 export default CurrentWeather;
