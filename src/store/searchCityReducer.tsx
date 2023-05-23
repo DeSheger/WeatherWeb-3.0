@@ -5,12 +5,12 @@ const initialState = {
 
 function searchCityReducer(state = initialState, action: any) {
     switch (action.type) {
-        case 'CHANGE':
+        case 'CHANGE_CITY':
             return {
                 ...state,
                 city: action.payload.city
             };
-        case 'RESET':
+        case 'RESET_CITY':
             return {
                 ...state,
                 city: 'warsaw'

@@ -12,10 +12,9 @@ function Home() {
     const temp = useSelector((state:any) => state.currentWeatherReducer.temp);
     const wind = useSelector((state:any) => state.currentWeatherReducer.wind);
 
-    const [click,setClick] = useState(false);
+    const [click,setClick] = useState(true);
 
     const changeValue = (e:any) => {
-        e.preventDefault();
         setClick(false)
         setCity(city=>city=e.target.value)
         console.log(searchedCity)
@@ -31,11 +30,11 @@ function Home() {
             <form className="home__form">
 
                 <div className="home__form-text">
-                    <Typewriter text={searchCity} speed={200}/>
+                    <Typewriter text={searchedCity} speed={200}/>
                 </div>
 
                 <div className="home__form-output">
-                    {click?<CurrentWeather city={city}></CurrentWeather>:null}
+                    {click?<CurrentWeather city={searchedCity}></CurrentWeather>:null}
                     <div className="home__form-outputImage"><img src={image}></img></div>
                     <div className="home__form-outputWeather">{weather}</div>
                     <div className="home__form-outputTemp">{temp}</div>
@@ -44,8 +43,9 @@ function Home() {
 
                 <div className="home__form-input">
                     <input className="home__form-inputBlock" value={city} 
-                    onChange={(e)=>changeValue(e)}></input>
-                    <input type="button" value={"search"} className="home__form-inputButton" onClick={(e)=>searchCity(e)}></input>
+                        onChange={(e)=>changeValue(e)}></input>
+                    <input type="button" value={"search"} className="home__form-inputButton" 
+                        onClick={(e)=>searchCity(e)}></input>
                 </div>
             </form>
         </div>

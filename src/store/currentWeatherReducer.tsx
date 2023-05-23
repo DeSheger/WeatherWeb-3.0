@@ -8,7 +8,7 @@ const initialState = {
 
 function currentWeatherReducer(state = initialState, action: any) {
     switch (action.type) {
-        case 'CHANGE':
+        case 'CHANGE_WEATHER':
             return {
                 ...state,
                 image: action.payload.image,
@@ -16,7 +16,7 @@ function currentWeatherReducer(state = initialState, action: any) {
                 temp: action.payload.temp,
                 wind: action.payload.wind,
             };
-        case 'RESET':
+        case 'RESET_WEATHER':
             return {
                 ...state,
                 image: 'EMPTY',

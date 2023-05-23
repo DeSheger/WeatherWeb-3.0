@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Typewriter from "../tools/Typewriter";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,9 +11,12 @@ function Start() {
 
     const changeValue = (e:any) => {
         setCity(e.target.value)
-        dispatch({type:'CHANGE',
+    }
+
+    const onClickHandler = () => {
+        dispatch({type:'CHANGE_CITY',
             payload: {
-                city: e.target.value
+                city: cityType
             }
         })
     }
@@ -37,7 +40,7 @@ function Start() {
                     <input className="start__form-input" type="text" value={cityType} onChange={
                         (e) => changeValue(e)
                     }/>
-                    <li><Link to="/home">Search</Link></li>
+                    <li><Link to="/home" onClick={() => onClickHandler()}>Search</Link></li>
                 </form>
 
             </div>
