@@ -198,6 +198,7 @@
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  border: 1px white dashed;
 }
 .home__form-text {
   display: flex;

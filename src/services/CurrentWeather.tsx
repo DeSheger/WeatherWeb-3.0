@@ -3,10 +3,10 @@ import {useEffect} from 'react';
 import axios from "axios";
 
 const CurrentWeather = (props:any) => {
-    const image = useSelector((state:any) => state.image);
-    const weather = useSelector((state:any) => state.weather);
-    const temp = useSelector((state:any) => state.temp);
-    const wind = useSelector((state:any) => state.wind);
+    const image = useSelector((state:any) => state.currentWeatherReducer.image);
+    const weather = useSelector((state:any) => state.currentWeatherReducer.weather);
+    const temp = useSelector((state:any) => state.currentWeatherReducer.temp);
+    const wind = useSelector((state:any) => state.currentWeatherReducer.wind);
 
     const dispatch = useDispatch();
 

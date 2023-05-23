@@ -1,6 +1,12 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import currentWeatherReducer from './currentWeatherReducer';
+import searchCityReducer from './searchCityReducer';
 
-const store = createStore(currentWeatherReducer);
+const reducers = combineReducers({
+    currentWeatherReducer,
+    searchCityReducer
+  })
+
+const store = createStore(reducers);
 
 export default store;
