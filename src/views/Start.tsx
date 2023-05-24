@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Typewriter from "../tools/Typewriter";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Start() {
-    const [cityType, setCity] = useState('');
-    const searchCity = useSelector((state:any) => state.searchCityReducer.city)
+    const [typingCity, setTypingCity] = useState(String);
 
     const dispatch = useDispatch();
 
-    const changeValue = (e:any) => {
-        setCity(e.target.value)
+    const onChangeHandler = (e: any) => {
+        setTypingCity(e.target.value)
     }
 
     const onClickHandler = () => {
-        dispatch({type:'CHANGE_CITY',
+        dispatch({
+            type: 'CHANGE_CITY',
             payload: {
-                city: cityType
+                city: typingCity
             }
         })
     }
@@ -37,9 +37,9 @@ function Start() {
 
                 <form className="start__form">
                     <p className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></p>
-                    <input className="start__form-input" type="text" value={cityType} onChange={
-                        (e) => changeValue(e)
-                    }/>
+                    <input className="start__form-input" type="text" value={typingCity} onChange={
+                        (e) => onChangeHandler(e)
+                    } />
                     <li><Link to="/home" onClick={() => onClickHandler()}>Search</Link></li>
                 </form>
 

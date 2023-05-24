@@ -17,6 +17,23 @@ const CurrentWeather = (props:any) => {
             }
         })
         })
+        .catch(function (error) {
+            dispatch({type:'CHANGE_WEATHER',
+            payload: {
+                image: ``,
+                weather: `sorry :(`,
+                temp:`sorry :(`,
+                wind: `sorry :(`
+            }});
+
+            dispatch({
+                type: 'CHANGE_CITY',
+                payload: {
+                    city: "no found"
+                }
+            })
+            console.log(error);
+          })
     })
 
     return null
