@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import Typewriter from "../tools/Typewriter";
 import CurrentWeather from "../services/CurrentWeather";
 import { useDispatch, useSelector } from 'react-redux';
+import Menu from "../components/Menu";
+
 
 function Home() {
-    const [city, setCity] = useState('');
+    const [typedCity, setTypedCity] = useState('');
+    const [updateWeather, setupdateWeather] = useState(true);
     const searchedCity = useSelector((state: any) => state.searchCityReducer.city)
 
     const image = useSelector((state: any) => state.currentWeatherReducer.image);
@@ -14,27 +17,25 @@ function Home() {
 
     const dispatch = useDispatch();
 
-    const [click, setClick] = useState(true);
-
-    
     const changeValue = (e: any) => {
-        setClick(false)
-        setCity(city => city = e.target.value)
+        setupdateWeather(false)
+        setTypedCity(city => city = e.target.value)
     }
 
-    const searchCity = (e: any) => {
+    const searchCity = () => {
         dispatch({
             type: 'CHANGE_CITY',
             payload: {
-                city: city
+                city: typedCity
             }
         })
-        setClick(true)
+        setupdateWeather(true)
     }
-    
+
 
     return (
         <div className="home">
+            <Menu down={true}/>
             <div className="home__main"></div>
             <form className="home__form">
 
@@ -43,7 +44,7 @@ function Home() {
                 </div>
 
                 <div className="home__form-output">
-                    {click ? <CurrentWeather city={searchedCity}></CurrentWeather> : null}
+                    {updateWeather ? <CurrentWeather city={searchedCity}></CurrentWeather> : null}
                     <div className="home__form-outputImage"><img alt="sorry :(" src={image}></img></div>
                     <div className="home__form-outputWeather">{weather}</div>
                     <div className="home__form-outputTemp">{temp}</div>
@@ -51,10 +52,10 @@ function Home() {
                 </div>
 
                 <div className="home__form-input">
-                    <input className="home__form-inputBlock" value={city}
+                    <input className="home__form-inputBlock" value={typedCity}
                         onChange={(e) => changeValue(e)}></input>
                     <input type="button" value={"search"} className="home__form-inputButton"
-                        onClick={(e) => searchCity(e)}></input>
+                        onClick={() => searchCity()}></input>
                 </div>
             </form>
         </div>

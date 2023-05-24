@@ -1,0 +1,55 @@
+.menu {
+    display: grid;
+
+
+    grid-area: 1/1/7/7;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        &-up {
+            grid-area: 1/1/1/7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 20px;
+
+            background-image: url('../../sources/upButton.png');
+            background-position: center;
+            background-size: auto 70%;
+            background-repeat: no-repeat;
+
+            a {
+                width: 25%;
+                height: 100%;
+            }
+        }
+        &-down {
+            grid-area: 6/1/6/7;
+            display: flex;
+            justify-content: center;
+            align-items: center;z-index: 0;
+
+            background-image: url('../../sources/downButton.png');
+            background-position: center;
+            background-size: auto 70%;
+            background-repeat: no-repeat;
+            animation: buttonAnimation 1s linear infinite;
+
+            a {
+                width: 25%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@keyframes buttonAnimation
+{
+    from {background-position: 50% 50%;}
+    to {background-position: 50% 70%;}
+}

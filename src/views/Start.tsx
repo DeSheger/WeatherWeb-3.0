@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 function Start() {
-    const [typingCity, setTypingCity] = useState(String);
+    const [typedCity, setTypedCity] = useState(String);
 
     const dispatch = useDispatch();
 
     const onChangeHandler = (e: any) => {
-        setTypingCity(e.target.value)
+        setTypedCity(e.target.value)
     }
 
     const onClickHandler = () => {
         dispatch({
             type: 'CHANGE_CITY',
             payload: {
-                city: typingCity
+                city: typedCity
             }
         })
     }
@@ -37,7 +37,7 @@ function Start() {
 
                 <form className="start__form">
                     <p className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></p>
-                    <input className="start__form-input" type="text" value={typingCity} onChange={
+                    <input className="start__form-input" type="text" value={typedCity} onChange={
                         (e) => onChangeHandler(e)
                     } />
                     <li><Link to="/home" onClick={() => onClickHandler()}>Search</Link></li>
