@@ -23,24 +23,28 @@ function Start() {
 
     return (
         <div className="start">
+            <div className="start__sidebar">
+                <h1 className="start__sidebar-logo">
+                    <Typewriter text="WeatherWeb-3.0" speed={200} />
+                </h1>
+
+                <ul className="start__sidebar-menu">
+                    <li className="start__sidebar-item"><Link to="/home" onClick={() => onClickHandler()}>Home</Link></li>
+                    <li className="start__sidebar-item"><Link to="/weekly" onClick={() => onClickHandler()}>Weekly</Link></li>
+                    <li className="start__sidebar-item"><Link to="/home" onClick={() => onClickHandler()}>Map</Link></li>
+                </ul>
+            </div>
+
             <div className="start__main">
 
-                <div className="start__mainQuote">
-                    <p className="start__form-text"><Typewriter text="To boldly go where no man has gone before ..." speed={200} /></p>
-                </div>
-                <div className="start__mainBackground"></div>
                 <div className="start__mainMoon"></div>
-                <div className="start__mainComete1"></div>
-                <div className="start__mainComete2"></div>
-                <div className="start__mainSpacewalk"></div>
-                <div className="start__mainMap"></div>
-
+                
                 <form className="start__form">
                     <p className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></p>
                     <input className="start__form-input" type="text" value={typedCity} onChange={
                         (e) => onChangeHandler(e)
                     } />
-                    <li><Link to="/home" onClick={() => onClickHandler()}>Search</Link></li>
+                    <li className="start__form-button"><Link to="/home" onClick={() => onClickHandler()}>Search</Link></li>
                 </form>
 
             </div>
