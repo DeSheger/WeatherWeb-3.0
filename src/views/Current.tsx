@@ -53,7 +53,7 @@ function Current() {
                 <div className="home__form-input">
                     <input className="home__form-inputBlock" value={typedCity}
                         onChange={(e) => changeValue(e)}></input>
-                    <input type="button" value={"search"} className="home__form-inputButton"
+                    <input type="button" value={"Search"} className="home__form-inputButton"
                         onClick={() => searchCity()}></input>
                 </div>
             </form>
