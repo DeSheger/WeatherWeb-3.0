@@ -1,55 +1,58 @@
-.menu {
-    display: grid;
+.menu__sidebar {
+    display: none;
 
+    height: 100%;
+    width: 300px;
 
-    grid-area: 1/1/7/7;
+    background-color: $base-color-dark;
+    box-shadow: inset #0d020b -2px -2px 3px;
 
-    &__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    @media (min-width:800px) {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+    }
 
-        &-up {
-            grid-area: 1/1/1/7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 20px;
+    &-logo {
+        display: flex;
+        grid-area: 1/1/1/1;
+        color: white;
 
-            background-image: url('../../sources/upButton.png');
-            background-position: center;
-            background-size: auto 70%;
-            background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+    }
 
-            a {
-                width: 25%;
-                height: 100%;
-            }
+    &-list {
+        display: grid;
+        grid-area: 2/1/5/1;
+    }
+
+    &-item {
+        display: flex;
+        grid-area: auto;
+
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
         }
-        &-down {
-            grid-area: 6/1/6/7;
-            display: flex;
-            justify-content: center;
-            align-items: center;z-index: 0;
-
-            background-image: url('../../sources/downButton.png');
-            background-position: center;
-            background-size: auto 70%;
-            background-repeat: no-repeat;
-            animation: buttonAnimation 1s linear infinite;
-
-            a {
-                width: 25%;
-                height: 100%;
-            }
+        a:hover {
+            color: #2a2a2a;
         }
     }
-}
 
-@keyframes buttonAnimation
-{
-    from {background-position: 50% 50%;}
-    to {background-position: 50% 70%;}
+    &-info
+    {
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
 }

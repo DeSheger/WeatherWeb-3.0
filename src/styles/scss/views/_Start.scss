@@ -4,58 +4,6 @@
     height: 100vh;
     width: 100vw;
 
-    &__sidebar
-    {
-        display: none;
-
-        height: 100%;
-        width: 300px;
-
-        background-color: #140511;
-        box-shadow: inset #0d020b -2px -2px 3px;
-
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        @media (min-width:800px) {
-            display: grid;
-        }
-
-        &-logo
-        {
-            display: flex;
-            grid-area: 1/1/1/1;
-            color: white;
-
-            align-items: center;
-            justify-content: center;
-        }
-
-        &-menu
-        {
-            display: grid;
-            grid-area: 2/1/5/1;
-        }
-
-        &-item
-        {
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            a{
-                text-decoration: none;
-                color: white;
-            }
-        }
-        &-item:hover
-        {
-            color: #2a2a2a;
-        }
-    }
-
     &__main
     {
         display: grid;
@@ -67,10 +15,9 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
 
-        background: linear-gradient(-45deg, #000000,#1b0617, #1e091b, #060607);
+        background: linear-gradient(-45deg, #6b0e0e,#40233b, #410f3a, #0f0f49);
 	    background-size: 400% 400%;
 	    animation: mainBackground 20s ease infinite;
-	    height: 100vh;
         overflow: hidden;
 
         &Moon

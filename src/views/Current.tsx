@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import Typewriter from "../tools/Typewriter";
 import CurrentWeather from "../services/CurrentWeather";
 import { useDispatch, useSelector } from 'react-redux';
 import Menu from "../components/Menu";
 
 
-function Home() {
+function Current() {
     const [typedCity, setTypedCity] = useState('');
     const [updateWeather, setupdateWeather] = useState(true);
     const searchedCity = useSelector((state: any) => state.searchCityReducer.city)
@@ -35,8 +34,8 @@ function Home() {
 
     return (
         <div className="home">
-            <Menu down={true}/>
-            <div className="home__main"></div>
+            <Menu />
+            <div className="home__main">
             <form className="home__form">
 
                 <div className="home__form-text">
@@ -46,9 +45,9 @@ function Home() {
                 <div className="home__form-output">
                     {updateWeather ? <CurrentWeather city={searchedCity}></CurrentWeather> : null}
                     <div className="home__form-outputImage"><img alt="sorry :(" src={image}></img></div>
-                    <div className="home__form-outputWeather">{weather}</div>
-                    <div className="home__form-outputTemp">{temp}</div>
-                    <div className="home__form-outputWind">{wind}</div>
+                    <div className="home__form-outputWeather">Sky: {weather}</div>
+                    <div className="home__form-outputTemp">Temperature is {temp} C</div>
+                    <div className="home__form-outputWind">Wind: {wind} m/s</div>
                 </div>
 
                 <div className="home__form-input">
@@ -58,8 +57,9 @@ function Home() {
                         onClick={() => searchCity()}></input>
                 </div>
             </form>
+            </div>
         </div>
     );
 }
 
-export default Home;
+export default Current;
