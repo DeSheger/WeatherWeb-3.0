@@ -1,42 +1,17 @@
 .start {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-
-    &__main
-    {
-        display: grid;
-
-        height: 100%;
-        flex-grow: 1;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-
-        background: linear-gradient(-45deg, #6b0e0e,#40233b, #410f3a, #0f0f49);
-	    background-size: 400% 400%;
-	    animation: mainBackground 20s ease infinite;
-        overflow: hidden;
-
-        &Moon
-        {
-            padding: 10%;
-            background-image: url(../../sources/Start/moonStart.png);
-            background-origin: content-box;
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            grid-area: 1 / 2 / 4 / 5;
-            z-index: 0;
-            animation:moonRotate 20s ease infinite;
-        }
-        
+    &moon {
+        padding: 10%;
+        background-image: url(../../sources/Start/moonStart.png);
+        background-origin: content-box;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        grid-area: 1 / 2 / 4 / 5;
+        z-index: 0;
+        animation: moonRotate 20s ease infinite;
     }
 
-    &__form
-    {
+    &__form {
         grid-area: 4 / 2 / 4 / 5;
 
         display: flex;
@@ -46,8 +21,8 @@
         justify-content: center;
         align-items: center;
         z-index: 2;
-        &-text
-        {
+
+        &-text {
             color: rgb(220, 220, 220);
             padding: 10px 10px;
             font-family: monospace;
@@ -55,16 +30,16 @@
             position: top;
             width: 100;
         }
-        &-input
-        {
+
+        &-input {
             width: 225px;
             height: 35px;
             padding: 10px 10px;
             animation: inputAnimation linear 5s;
             cursor: text;
         }
-        &-button
-        {
+
+        &-button {
             font-family: monospace;
             font-size: 17px;
             width: 225px;
@@ -73,31 +48,55 @@
             text-decoration: none;
             list-style: none;
             text-align: center;
-                a:link { text-decoration: none; }
-                a:visited { text-decoration: none; }
-                a:hover { text-decoration: none; color: #290f24; }
-                a:active { text-decoration: none; }
+
+            a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: #290f24;
+            }
+
+            a:active {
+                text-decoration: none;
+            }
         }
     }
 }
 
-@keyframes moonRotate 
-{
-    0% {transform: rotate(0); opacity: 0;}
-    50% {transform: rotate(160deg); opacity: 1;}
-    100% {transform: rotate(360deg); opacity: 0;}
+
+@keyframes moonRotate {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(160deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
 }
 
-@keyframes mainBackground 
-{
+@keyframes mainBackground {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
-

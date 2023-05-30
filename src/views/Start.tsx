@@ -3,6 +3,23 @@ import Typewriter from "../tools/Typewriter";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Menu from "../components/Menu";
+import Layout from "./Layout";
+
+const Inside = (props:any) => {
+    return (
+        <>
+        <div className="start__moon"></div>
+                
+                <form className="start__form">
+                    <h2 className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
+                    <input className="start__form-input" type="text" value={props.typedCity} onChange={
+                        (e) => props.onChangeHandler(e)
+                    } />
+                    <li className="start__form-button"><Link to="/current" onClick={() => props.onClickHandler()}>Search</Link></li>
+                </form>
+        </>
+    )
+}
 
 function Start() {
     const [typedCity, setTypedCity] = useState(String);
@@ -23,12 +40,9 @@ function Start() {
     }
 
     return (
-        <div className="start">
+        <Layout>
             <Menu />
-
-            <div className="start__main">
-
-                <div className="start__mainMoon"></div>
+                <div className="start__moon"></div>
                 
                 <form className="start__form">
                     <h2 className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
@@ -37,9 +51,7 @@ function Start() {
                     } />
                     <li className="start__form-button"><Link to="/current" onClick={() => onClickHandler()}>Search</Link></li>
                 </form>
-
-            </div>
-        </div>
+        </Layout>
     );
 }
 
