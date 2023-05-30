@@ -6,22 +6,6 @@ import Menu from "../components/Menu";
 import Layout from "./Layout";
 
 const Inside = (props:any) => {
-    return (
-        <>
-        <div className="start__moon"></div>
-                
-                <form className="start__form">
-                    <h2 className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
-                    <input className="start__form-input" type="text" value={props.typedCity} onChange={
-                        (e) => props.onChangeHandler(e)
-                    } />
-                    <li className="start__form-button"><Link to="/current" onClick={() => props.onClickHandler()}>Search</Link></li>
-                </form>
-        </>
-    )
-}
-
-function Start() {
     const [typedCity, setTypedCity] = useState(String);
 
     const dispatch = useDispatch();
@@ -39,10 +23,10 @@ function Start() {
         })
     }
 
+
     return (
-        <Layout>
-            <Menu />
-                <div className="start__moon"></div>
+        <>
+        <div className="start__moon"></div>
                 
                 <form className="start__form">
                     <h2 className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
@@ -51,6 +35,16 @@ function Start() {
                     } />
                     <li className="start__form-button"><Link to="/current" onClick={() => onClickHandler()}>Search</Link></li>
                 </form>
+        </>
+    )
+}
+
+function Start() {
+
+    return (
+        <Layout>
+            <Menu />
+            <Inside />
         </Layout>
     );
 }
