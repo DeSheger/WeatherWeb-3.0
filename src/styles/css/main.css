@@ -223,7 +223,7 @@
   background-color: #260a20;
   border: none;
   color: white;
-  margin-top: 5px;
+  margin: 5px 0;
 }
 
 @keyframes mainBackground {
