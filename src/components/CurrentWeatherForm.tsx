@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CurrentWeather from "../services/CurrentWeather";
 
@@ -28,6 +28,10 @@ function CurrentWeatherForm() {
         })
         setupdateWeather(true)
     }
+
+    useEffect(() => {
+        setupdateWeather(false)
+      }, []);
 
     return(
         <form className="currentWeatherForm">

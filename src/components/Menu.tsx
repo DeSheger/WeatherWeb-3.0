@@ -13,7 +13,7 @@ function Menu(props: any) {
                 <ul className="menu__sidebar-list">
                     <li className="menu__sidebar-item"><Link to="/current" >Current</Link></li>
                     <li className="menu__sidebar-item"><Link to="/weekly">Weekly</Link></li>
-                    <li className="menu__sidebar-item"><Link to="/current" >Map</Link></li>
+                    <li className="menu__sidebar-item"><Link to="/map" >Map</Link></li>
                 </ul>
 
                 <p className="menu__sidebar-info">

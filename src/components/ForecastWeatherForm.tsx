@@ -1,43 +1,57 @@
 import { useSelector } from "react-redux";
 import ForecastWeather from "../services/ForecastWeather";
+import { useEffect, useState } from "react";
 
 function ForecastWeatherForm() {
     const searchedCity = useSelector((state: any) => state.searchCityReducer.city)
     const forecastWeather = useSelector((state: any) => state.forecastWeatherReducer.forecast)
-    console.log(forecastWeather)
+    const city = useSelector((state: any) => state.forecastWeatherReducer.city)
+
+    const [updateWeather, setupdateWeather] = useState(true);
+
+    useEffect(() => {
+        let useCall = function(){
+            setupdateWeather(false)
+        };
+        setTimeout(useCall,500)
+      }, []);
+
     return (
         <form className="forecastWeatherForm">
-            <ForecastWeather city={searchedCity} />
-
+            {updateWeather?<ForecastWeather city={searchedCity} />:null}
             <li className="forecastWeatherForm__item">
-                {forecastWeather[0].date}
-                {forecastWeather[0].weather}
-                {forecastWeather[0].img}
-                {forecastWeather[0].temp}
+                <p>{city}</p>
+                
             </li>
             <li className="forecastWeatherForm__item">
-                {forecastWeather[1].date}
-                {forecastWeather[1].weather}
-                {forecastWeather[1].img}
-                {forecastWeather[1].temp}
+                <p>{forecastWeather[0].date}</p>
+                <p>{forecastWeather[0].weather}</p>
+                <p><img src={forecastWeather[0].img} alt="sorry"></img></p>
+                <p>{forecastWeather[0].temp}</p>
             </li>
             <li className="forecastWeatherForm__item">
-                {forecastWeather[2].date}
-                {forecastWeather[2].weather}
-                {forecastWeather[2].img}
-                {forecastWeather[2].temp}
+                <p>{forecastWeather[1].date}</p>
+                <p>{forecastWeather[1].weather}</p>
+                <p><img src={forecastWeather[1].img} alt="sorry"></img></p>
+                <p>{forecastWeather[1].temp}</p>
             </li>
             <li className="forecastWeatherForm__item">
-                {forecastWeather[3].date}
-                {forecastWeather[3].weather}
-                {forecastWeather[3].img}
-                {forecastWeather[3].temp}
+                <p>{forecastWeather[2].date}</p>
+                <p>{forecastWeather[2].weather}</p>
+                <p><img src={forecastWeather[2].img} alt="sorry"></img></p>
+                <p>{forecastWeather[2].temp}</p>
             </li>
             <li className="forecastWeatherForm__item">
-                {forecastWeather[4].date}
-                {forecastWeather[4].weather}
-                {forecastWeather[4].img}
-                {forecastWeather[4].temp}
+                <p>{forecastWeather[3].date}</p>
+                <p>{forecastWeather[3].weather}</p>
+                <p><img src={forecastWeather[3].img} alt="sorry"></img></p>
+                <p>{forecastWeather[3].temp}</p>
+            </li>
+            <li className="forecastWeatherForm__item">
+                <p>{forecastWeather[4].date}</p>
+                <p>{forecastWeather[4].weather}</p>
+                <p><img src={forecastWeather[4].img} alt="sorry"></img></p>
+                <p>{forecastWeather[4].temp}</p>
             </li>
         </form>
     )

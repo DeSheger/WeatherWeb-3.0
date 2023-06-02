@@ -1,5 +1,5 @@
 .forecastWeatherForm {
-    grid-area: 2 / 2 / 5 / 5;
+    grid-area: 1 / 1 / 6 / 6;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -8,6 +8,7 @@
 
     border: 1px white dashed;
     border-radius: 10px;
+    margin: 10%;
 
     &__item {
         display: flex;
@@ -18,5 +19,6 @@
 
         text-decoration: none;
         list-style: none;
+        color: white;
     }
 }

@@ -1,0 +1,13 @@
+.weatherMap {
+    grid-area: 1 / 1 / 6 / 6;
+    display: flex;
+
+    border: 1px white dashed;
+    border-radius: 10px;
+    margin: 10%;
+
+    &__map {
+        width: 100%;
+        height: 100%;
+    }
+}

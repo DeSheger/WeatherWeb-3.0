@@ -1,6 +1,7 @@
 const initialState = {
-    lat: 52.2319581,
-    lon: -85.85,
+    lat: 52.215569,
+    lon: 21.013839,
+    city: 'warsaw',
     forecast: [
         { date: '1', weather: 'unknown', temp: 'unknown', img: 'unknown' },
         { date: '2', weather: 'unknown', temp: 'unknown', img: 'unknown' },
@@ -21,13 +22,14 @@ function forecastWeatherReducer(state = initialState, action: any) {
         case 'RESET_CORDS':
             return {
                 ...state,
-                lat: 52.2319581,
-                lon: -85.85
+                lat: 52.215569,
+                lon: 21.013839
             };
         case 'CHANGE_FORECAST':
             return {
                 ...state,
-                forecast: action.payload.forecast
+                forecast: action.payload.forecast,
+                city: action.payload.city
             };
         default:
             return state;
