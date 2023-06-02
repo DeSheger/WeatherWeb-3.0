@@ -179,6 +179,25 @@
   margin: 5px 0;
 }
 
+.forecastWeatherForm {
+  grid-area: 2/2/5/5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 1px white dashed;
+  border-radius: 10px;
+}
+.forecastWeatherForm__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
 .searchForm {
   grid-area: 4/2/4/5;
   display: flex;

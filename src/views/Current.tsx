@@ -1,4 +1,4 @@
-import CurrentWeatherForm from "../components/CurrentWeather";
+import CurrentWeatherForm from "../components/CurrentWeatherForm";
 import Menu from "../components/Menu";
 import Layout from "./Layout";
 import Main from "./Main";
