@@ -23,12 +23,12 @@ function SearchForm()
     }
 
     return(
-        <form className="start__form">
-                <h2 className="start__form-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
-                <input className="start__form-input" type="text" value={typedCity} onChange={
+        <form className="searchForm">
+                <h2 className="searchForm-text"><Typewriter text="Search weather for your city :" speed={200} /></h2>
+                <input className="searchForm-input" type="text" value={typedCity} onChange={
                     (e) => onChangeHandler(e)
                 } />
-                <li className="start__form-button"><Link to="/current" onClick={() => onClickHandler()}>Search</Link></li>
+                <li className="searchForm-button"><Link to="/current" onClick={() => onClickHandler()}>Search</Link></li>
         </form>
     )
 }

@@ -3,10 +3,27 @@
   flex-direction: row;
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(-45deg, #6b0e0e, #40233b, #410f3a, #0f0f49);
+  background-size: 400% 400%;
+  animation: mainBackground 20s ease infinite;
+  overflow: hidden;
 }
-.layout__main {
+
+@keyframes mainBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.main {
   display: grid;
   height: 100%;
+  width: 100%;
   flex-grow: 1;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -18,246 +35,10 @@
   overflow: hidden;
 }
 
-@keyframes mainBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.startmoon {
-  padding: 10%;
-  background-image: url(../../sources/Start/moonStart.png);
-  background-origin: content-box;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  grid-area: 1/2/4/5;
-  z-index: 0;
-  animation: moonRotate 20s ease infinite;
-}
-.start__form {
-  grid-area: 4/2/4/5;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-.start__form-text {
-  color: rgb(220, 220, 220);
-  padding: 10px 10px;
-  font-family: monospace;
-  font-size: 17px;
-  position: top;
-  width: 100;
-}
-.start__form-input {
-  width: 225px;
-  height: 35px;
-  padding: 10px 10px;
-  animation: inputAnimation linear 5s;
-  cursor: text;
-}
-.start__form-button {
-  font-family: monospace;
-  font-size: 17px;
-  width: 225px;
-  height: 35px;
-  padding: 10px 10px;
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-}
-.start__form-button a:link {
-  text-decoration: none;
-}
-.start__form-button a:visited {
-  text-decoration: none;
-}
-.start__form-button a:hover {
-  text-decoration: none;
-  color: #290f24;
-}
-.start__form-button a:active {
-  text-decoration: none;
-}
-
-@keyframes moonRotate {
-  0% {
-    transform: rotate(0);
-    opacity: 0;
-  }
-  50% {
-    transform: rotate(160deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-@keyframes mainBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.home {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  width: 100vw;
-}
-.home__main {
-  height: 100%;
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  background: linear-gradient(-45deg, #6b0e0e, #40233b, #410f3a, #0f0f49);
-  background-size: 400% 400%;
-  animation: mainBackground 20s ease infinite;
-  overflow: hidden;
-}
-.home__form {
-  grid-area: 2/2/6/6;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  border: 1px white dashed;
-  border-radius: 10px;
-}
-.home__form-text {
-  display: flex;
-  grid-area: 1/1/1/3;
-  justify-content: center;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  text-transform: uppercase;
-  border-bottom: 1px white dashed;
-}
-.home__form-output {
-  width: 100%;
-  height: 100%;
-  grid-area: 2/1/4/3;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  color: white;
-}
-.home__form-outputImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-area: 1/1/1/1;
-  overflow: hidden;
-  border-right: 1px white dashed;
-}
-.home__form-outputWeather {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 5px;
-  grid-area: 1/2/1/2;
-  overflow: hidden;
-}
-.home__form-outputTemp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  grid-area: 2/1/2/1;
-  overflow: hidden;
-  padding: 5px;
-  border-right: 1px white dashed;
-}
-.home__form-outputWind {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  grid-area: 2/2/2/2;
-  padding: 5px;
-  overflow: hidden;
-}
-.home__form-input {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  grid-area: 4/1/4/3;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home__form-inputBlock {
-  width: 225px;
-  height: 35px;
-  padding: 10px 10px;
-}
-.home__form-inputButton {
-  width: 225px;
-  height: 35px;
-  padding: 10px 10px;
-  cursor: pointer;
-  background-color: #260a20;
-  border: none;
-  color: white;
-  margin: 5px 0;
-}
-
-@keyframes mainBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.weekly {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-}
-.weekly__main {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(14, 12, 12);
-  grid-area: 1/1/7/7;
-}
-
 .menu__sidebar {
   display: none;
   height: 100%;
-  width: 300px;
+  width: 400px;
   background-color: #140511;
   box-shadow: inset #0d020b -2px -2px 3px;
   grid-template-columns: repeat(1, 1fr);
@@ -305,6 +86,174 @@
   text-align: center;
 }
 
+.currentWeatherForm {
+  grid-area: 2/2/5/5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 1px white dashed;
+  border-radius: 10px;
+}
+.currentWeatherForm-text {
+  display: flex;
+  grid-area: 1/1/1/3;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  text-transform: uppercase;
+  border-bottom: 1px white dashed;
+}
+.currentWeatherForm-output {
+  width: 100%;
+  height: 100%;
+  grid-area: 2/1/4/3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: white;
+}
+.currentWeatherForm-outputImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/1/1/1;
+  overflow: hidden;
+  border-right: 1px white dashed;
+}
+.currentWeatherForm-outputWeather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  grid-area: 1/2/1/2;
+  overflow: hidden;
+}
+.currentWeatherForm-outputTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: 2/1/2/1;
+  overflow: hidden;
+  padding: 5px;
+  border-right: 1px white dashed;
+}
+.currentWeatherForm-outputWind {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-area: 2/2/2/2;
+  padding: 5px;
+  overflow: hidden;
+}
+.currentWeatherForm-input {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  grid-area: 4/1/4/3;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.currentWeatherForm-inputBlock {
+  width: 225px;
+  height: 35px;
+  padding: 10px 10px;
+}
+.currentWeatherForm-inputButton {
+  width: 225px;
+  height: 35px;
+  padding: 10px 10px;
+  cursor: pointer;
+  background-color: #260a20;
+  border: none;
+  color: white;
+  margin: 5px 0;
+}
+
+.searchForm {
+  grid-area: 4/2/4/5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.searchForm-text {
+  color: rgb(220, 220, 220);
+  padding: 10px 10px;
+  font-family: monospace;
+  font-size: 17px;
+  position: top;
+  width: 100;
+}
+.searchForm-input {
+  width: 225px;
+  height: 35px;
+  padding: 10px 10px;
+  animation: inputAnimation linear 5s;
+  cursor: text;
+}
+.searchForm-button {
+  font-family: monospace;
+  font-size: 17px;
+  width: 225px;
+  height: 35px;
+  padding: 10px 10px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+}
+.searchForm-button a:link {
+  text-decoration: none;
+}
+.searchForm-button a:visited {
+  text-decoration: none;
+}
+.searchForm-button a:hover {
+  text-decoration: none;
+  color: #290f24;
+}
+.searchForm-button a:active {
+  text-decoration: none;
+}
+
+.moon {
+  padding: 10%;
+  background-image: url(../../sources/Start/moonStart.png);
+  background-origin: content-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-area: 1/2/4/5;
+  z-index: 0;
+  animation: moonRotate 20s ease infinite;
+}
+
+@keyframes moonRotate {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(160deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;

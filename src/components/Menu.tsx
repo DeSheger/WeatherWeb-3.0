@@ -11,7 +11,7 @@ function Menu(props: any) {
                 </h1>
 
                 <ul className="menu__sidebar-list">
-                    <li className="menu__sidebar-item"><Link to="/current" >Home</Link></li>
+                    <li className="menu__sidebar-item"><Link to="/current" >Current</Link></li>
                     <li className="menu__sidebar-item"><Link to="/weekly">Weekly</Link></li>
                     <li className="menu__sidebar-item"><Link to="/current" >Map</Link></li>
                 </ul>

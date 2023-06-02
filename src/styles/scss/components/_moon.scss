@@ -1,0 +1,28 @@
+.moon {
+    padding: 10%;
+        background-image: url(../../sources/Start/moonStart.png);
+        background-origin: content-box;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        grid-area: 1 / 2 / 4 / 5;
+        z-index: 0;
+        animation: moonRotate 20s ease infinite;
+}
+
+@keyframes moonRotate {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotate(160deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}

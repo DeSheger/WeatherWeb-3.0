@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import Menu from "../components/Menu";
 import Layout from "./Layout";
 import SearchForm from "../components/SearchForm";
+import Main from "./Main";
+import Moon from "../components/Moon";
 
 
 function Start() {
@@ -12,7 +14,10 @@ function Start() {
     return (
         <Layout>
             <Menu />
-            <SearchForm />
+            <Main>
+                <Moon />
+                <SearchForm />
+            </Main>
         </Layout>
     );
 }
