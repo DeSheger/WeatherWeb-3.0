@@ -7,7 +7,7 @@ const CurrentWeather = (props:any) => {
 
     useEffect(() => {
         console.log("currentWeather Request")
-        axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${props.city}&limit=1&appid=34cf18d958a5bebc2a3aaa0cf4eccbf6`)
+        axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${props.city}&limit=1&appid=34cf18d958a5bebc2a3aaa0cf4eccbf6`)
             .then((response) => {
                 dispatch({
                     type: 'CHANGE_CORDS',
@@ -24,7 +24,7 @@ const CurrentWeather = (props:any) => {
         .then((response)=>{
             dispatch({type:'CHANGE_WEATHER',
             payload: {
-                image:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+                image:`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
                 weather: response.data.weather[0].main,
                 temp: response.data.main.temp,
                 wind: response.data.wind.speed
