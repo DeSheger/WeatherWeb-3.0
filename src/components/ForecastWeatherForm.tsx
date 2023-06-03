@@ -24,34 +24,34 @@ function ForecastWeatherForm() {
                 
             </li>
             <li className="forecastWeatherForm__item">
-                <p>{forecastWeather[0].date}</p>
+                <p>{forecastWeather[0].date.substr(0, 11)}</p>
                 <p>{forecastWeather[0].weather}</p>
                 <p><img src={forecastWeather[0].img} alt="sorry"></img></p>
-                <p>{forecastWeather[0].temp}</p>
+                <p>{forecastWeather[0].temp} C</p>
             </li>
             <li className="forecastWeatherForm__item">
-                <p>{forecastWeather[1].date}</p>
+                <p>{forecastWeather[1].date.substr(0, 11)}</p>
                 <p>{forecastWeather[1].weather}</p>
                 <p><img src={forecastWeather[1].img} alt="sorry"></img></p>
-                <p>{forecastWeather[1].temp}</p>
+                <p>{forecastWeather[1].temp} C</p>
             </li>
             <li className="forecastWeatherForm__item">
-                <p>{forecastWeather[2].date}</p>
+                <p>{forecastWeather[2].date.substr(0, 11)}</p>
                 <p>{forecastWeather[2].weather}</p>
                 <p><img src={forecastWeather[2].img} alt="sorry"></img></p>
-                <p>{forecastWeather[2].temp}</p>
+                <p>{forecastWeather[2].temp} C</p>
             </li>
             <li className="forecastWeatherForm__item">
-                <p>{forecastWeather[3].date}</p>
+                <p>{forecastWeather[3].date.substr(0, 11)}</p>
                 <p>{forecastWeather[3].weather}</p>
                 <p><img src={forecastWeather[3].img} alt="sorry"></img></p>
-                <p>{forecastWeather[3].temp}</p>
+                <p>{forecastWeather[3].temp} C</p>
             </li>
             <li className="forecastWeatherForm__item">
-                <p>{forecastWeather[4].date}</p>
+                <p>{forecastWeather[4].date.substr(0, 11)}</p>
                 <p>{forecastWeather[4].weather}</p>
                 <p><img src={forecastWeather[4].img} alt="sorry"></img></p>
-                <p>{forecastWeather[4].temp}</p>
+                <p>{forecastWeather[4].temp} C</p>
             </li>
         </form>
     )

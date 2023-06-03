@@ -9,6 +9,8 @@
     border: 1px white dashed;
     border-radius: 10px;
     margin: 10%;
+    overflow-y: auto;
+    padding: 10px 5px;
 
     &__item {
         display: flex;
@@ -20,5 +22,10 @@
         text-decoration: none;
         list-style: none;
         color: white;
+        margin: 3px;
+    }
+
+    &__item:nth-child(odd) {
+        border-right: 1px white dashed;
     }
 }

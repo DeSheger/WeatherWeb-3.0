@@ -21,7 +21,7 @@ const ForecastWeather = (props: any) => {
             .catch(function (error) {
                 console.log(error)
             })
-        axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=34cf18d958a5bebc2a3aaa0cf4eccbf6`)
+        axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=34cf18d958a5bebc2a3aaa0cf4eccbf6`)
             .then((response) => {
                 dispatch({
                     type: 'CHANGE_FORECAST',
