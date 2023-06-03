@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WeatherWeb-3.0/static/css/main.54fd3c62.css",
+    "main.js": "/WeatherWeb-3.0/static/js/main.7bfa248d.js",
+    "static/js/787.a9a251fa.chunk.js": "/WeatherWeb-3.0/static/js/787.a9a251fa.chunk.js",
+    "static/media/moonStart.png": "/WeatherWeb-3.0/static/media/moonStart.c8dc96d3a2f572092ff9.png",
+    "index.html": "/WeatherWeb-3.0/index.html",
+    "main.54fd3c62.css.map": "/WeatherWeb-3.0/static/css/main.54fd3c62.css.map",
+    "main.7bfa248d.js.map": "/WeatherWeb-3.0/static/js/main.7bfa248d.js.map",
+    "787.a9a251fa.chunk.js.map": "/WeatherWeb-3.0/static/js/787.a9a251fa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54fd3c62.css",
+    "static/js/main.7bfa248d.js"
+  ]
+}
