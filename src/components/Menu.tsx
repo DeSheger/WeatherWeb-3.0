@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Typewriter from "../tools/Typewriter";
 
 
-function Menu(props: any) {
+const Menu = () => {
 
     return (
         <div className="menu__sidebar">

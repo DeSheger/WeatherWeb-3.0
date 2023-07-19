@@ -1,12 +1,13 @@
-// Przykładowy reducer
-const initialState = {
+import ICurrentWeather from "../interfaces/ICurrentWeather";
+
+const initialState: ICurrentWeather = {
     image: 'EMPTY',
     weather: 'EMPTY',
     temp: 'EMPTY',
     wind: 'EMPTY',
 };
 
-function currentWeatherReducer(state = initialState, action: any) {
+const currentWeatherReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case 'CHANGE_WEATHER':
             return {

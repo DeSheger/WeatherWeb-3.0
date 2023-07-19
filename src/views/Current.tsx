@@ -4,7 +4,7 @@ import Layout from "./Layout";
 import Main from "./Main";
 
 
-function Current() {
+const Current = () => {
     return (
         <Layout>
             <Menu />

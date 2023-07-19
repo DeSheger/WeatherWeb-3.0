@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-function WeatherMap() {
+const WeatherMap = () => {
     const lat = useSelector((state: any) => state.forecastWeatherReducer.lat)
     const lon = useSelector((state: any) => state.forecastWeatherReducer.lon)
 

@@ -1,4 +1,6 @@
-const initialState = {
+import IForecastWeather from "../interfaces/IForecastWeather";
+
+const initialState: IForecastWeather = {
     lat: 52.215569,
     lon: 21.013839,
     city: 'warsaw',
@@ -11,7 +13,7 @@ const initialState = {
     ]
 }
 
-function forecastWeatherReducer(state = initialState, action: any) {
+const forecastWeatherReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case 'CHANGE_CORDS':
             return {

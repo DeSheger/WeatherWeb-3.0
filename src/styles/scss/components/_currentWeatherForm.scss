@@ -1,3 +1,5 @@
+$item-color: rgb(31, 22, 41);
+
 .currentWeatherForm {
     grid-area: 1 / 1 / 6 / 6;
     display: grid;
@@ -6,8 +8,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 
-    border: 1px white dashed;
-    border-radius: 10px;
+    
     margin: 10%;
 
     &-text {
@@ -18,7 +19,10 @@
         color: rgb(255, 255, 255);
         font-size: 40px;
         text-transform: uppercase;
-        border-bottom: 1px white dashed;
+        background-color: $item-color;
+        margin: 3px;
+        padding: 3px;
+        border-radius: 6px;
     }
 
     &-output {
@@ -40,7 +44,10 @@
             align-items: center;
             grid-area: 1/1/1/1;
             overflow: hidden;
-            border-right: 1px white dashed;
+            background-color: $item-color;
+            margin: 3px;
+            padding: 3px;
+            border-radius: 6px;
         }
 
         &Weather {
@@ -51,6 +58,10 @@
             padding: 5px;
             grid-area: 1/2/1/2;
             overflow: hidden;
+            background-color: $item-color;
+            margin: 3px;
+            padding: 3px;
+            border-radius: 6px;
         }
 
         &Temp {
@@ -61,7 +72,10 @@
             grid-area: 2/1/2/1;
             overflow: hidden;
             padding: 5px;
-            border-right: 1px white dashed;
+            background-color: $item-color;
+            margin: 3px;
+            padding: 3px;
+            border-radius: 6px;
         }
 
         &Wind {
@@ -72,6 +86,10 @@
             grid-area: 2/2/2/2;
             padding: 5px;
             overflow: hidden;
+            background-color: $item-color;
+            margin: 3px;
+            padding: 3px;
+            border-radius: 6px;
         }
     }
 
@@ -85,7 +103,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        
+            margin: 3px;
         &Block {
             width: 225px;
             height: 35px;

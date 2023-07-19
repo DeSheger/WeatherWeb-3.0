@@ -3,7 +3,7 @@ import Menu from "../components/Menu";
 import Layout from "./Layout";
 import Main from "./Main";
 
-function Weekly() {
+const Weekly = () => {
     return (
         <Layout>
             <Menu />

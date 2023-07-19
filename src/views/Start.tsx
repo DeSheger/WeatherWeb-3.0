@@ -5,8 +5,7 @@ import Main from "./Main";
 import Moon from "../components/Moon";
 
 
-function Start() {
-
+const Start = () => {
     return (
         <Layout>
             <Menu />

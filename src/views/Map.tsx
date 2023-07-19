@@ -3,7 +3,7 @@ import WeatherMap from "../components/WeatherMap";
 import Layout from "./Layout";
 import Main from "./Main";
 
-function Map() {
+const Map = () => {
     return (
         <Layout>
             <Menu />

@@ -1,4 +1,4 @@
-function Moon() {
+const Moon = () => {
     return (
         <div className="moon">
 
