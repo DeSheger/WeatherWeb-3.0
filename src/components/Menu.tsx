@@ -8,6 +8,7 @@ const Menu = () => {
         <div className="menu__sidebar">
                 <h1 className="menu__sidebar-logo">
                     <Typewriter text="WeatherWeb-3.0" speed={200} />
+                    PIOTR GROSZ 131784
                 </h1>
 
                 <ul className="menu__sidebar-list">
